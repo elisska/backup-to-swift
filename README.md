@@ -10,7 +10,7 @@
 **Copy data from HDFS to Swift:**
 
 ```
-hadoop distcp -D fs.swift.service.<PROVIDER>.username=<username> -D fs.swift.service.<PROVIDER>.password=<api-key> -update -p <PATH-ON-HDFS> swift://<CONTAINER-NAME>.<PROVIDER>/<OBJECT-NAME>
+hadoop distcp -D fs.swift.service.\<PROVIDER\>.username=\<username\> -D fs.swift.service.\<PROVIDER\>.password=<api-key> -update -p <PATH-ON-HDFS> swift://<CONTAINER-NAME>.<PROVIDER>/<OBJECT-NAME>
 ```
 
 **Copy data from Swift to HDFS:**
