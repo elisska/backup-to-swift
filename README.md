@@ -4,7 +4,7 @@
 
 * Download the correct version of hadoop-openstack integration lib from [here](http://grepcode.com/project/repository.cloudera.com/content/repositories/releases/org.apache.hadoop/hadoop-openstack/) or use the [attached jar](hadoop-openstack-2.6.0-cdh5.5.1.jar)
 * Place it to the folder containing hadoop libraries on every node (if CDH is used then this folder would be /opt/cloudera/parcels/CDH/lib/hadoop)
-* Add lines from [configuration.xml](configuration.xml) to **core-site.xml** configuration file (if CLoudera Manager is used, go to YARN configuration, search for _YARN Service Advanced Configuration Snippet (Safety Valve) for core-site.xml_ and add the lines to the section, then restart cluster). Note that you need to specify correct parameters specific to your environment.
+* Add lines from [configuration.xml](configuration.xml) to **core-site.xml** configuration file (if CLoudera Manager is used, go to YARN configuration, search for _YARN Service Advanced Configuration Snippet (Safety Valve) for core-site.xml_ and add the lines to the section, then restart cluster). Note that you need to specify correct parameters specific to your environment: PROVIDER, AUTH-URL, REGION-NAME, TENANT-NAME
 * Test the integration using commands like below:
 
 **Copy data from HDFS to Swift:**
