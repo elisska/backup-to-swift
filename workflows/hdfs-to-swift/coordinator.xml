@@ -1,0 +1,13 @@
+<coordinator-app name="Backup-to-Swift" frequency="${freq}" start="${startTime}" end="${endTime}" timezone="UTC" xmlns="uri:oozie:coordinator:0.1">
+   <action>
+      <workflow>
+         <app-path>${appPath}</app-path>
+         <configuration>
+            <property>
+              <name>start_date</name>
+              <value>${startTime}</value>
+            </property>
+         </configuration>
+      </workflow>
+   </action>     
+</coordinator-app>

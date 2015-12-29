@@ -1,0 +1,31 @@
+<property>
+  <name>fs.swift.service.provider</name>
+  <value>cto</value>
+</property>
+<property>
+  <name>fs.swift.impl</name>
+  <value>org.apache.hadoop.fs.swift.snative.SwiftNativeFileSystem</value>
+</property>
+<property>
+  <name>fs.swift.service.${fs.swift.service.provider}.auth.url</name>
+  <value>AUTH-URL</value>
+  <description>Openstack Auth URL, like https://us-texas-3.cloud.aaa.com:5000/v2.0/tokens</description>
+</property>
+<property>
+  <name>fs.swift.service.${fs.swift.service.provider}.http.port</name>
+  <value>8080</value>
+</property>
+<property>
+  <name>fs.swift.service.${fs.swift.service.provider}.region</name>
+  <value>REGION-NAME</value>
+  <description>Region name, like us-texas-3</description>
+</property>
+<property>
+  <name>fs.swift.service.${fs.swift.service.provider}.public</name>
+  <value>true</value>
+</property>
+<property>
+  <name>fs.swift.service.${fs.swift.service.provider}.tenant</name>
+  <value>TENANT-NAME</value>
+  <description>Openstack tenant name where Swift Object ctore is located</description>
+</property>
