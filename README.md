@@ -10,7 +10,7 @@
 **Copy data from HDFS to Swift:**
 
 ```
-hadoop distcp -D fs.swift.service.\<PROVIDER\>.username=\<username\> -D fs.swift.service.\<PROVIDER\>.password=<api-key> -update -p <PATH-ON-HDFS> swift://<CONTAINER-NAME>.<PROVIDER>/<OBJECT-NAME>
+hadoop distcp -D fs.swift.service.<PROVIDER>.username=<username> -D fs.swift.service.<PROVIDER>.password=<api-key> -update -p <PATH-ON-HDFS> swift://<CONTAINER-NAME>.<PROVIDER>/<OBJECT-NAME>
 ```
 
 **Copy data from Swift to HDFS:**
@@ -19,7 +19,7 @@ hadoop distcp -D fs.swift.service.\<PROVIDER\>.username=\<username\> -D fs.swift
 hadoop distcp -D fs.swift.service.<PROVIDER>.username=<username> -D fs.swift.service.<PROVIDER>.password=<api-key> -update -p swift://<CONTAINER-NAME>.<PROVIDER>/<OBJECT-NAME> <PATH-ON-HDFS> 
 ```
 
-*Note:* Parameters _fs.swift.service.<PROVIDER>.username=<username>_ and _fs.swift.service.<PROVIDER>.password=<api-key>_ can be added to *core-site.xml* config file, and once added there is no need to specify them via -D options in `hadoop distcp` command.
+*Note:* Parameters _fs.swift.service.\<PROVIDER\>.username=\<username\>_ and _fs.swift.service.\<PROVIDER\>.password=\<api-key\>_ can be added to *core-site.xml* config file, and once added there is no need to specify them via -D options in `hadoop distcp` command.
 
 ## Oozie workflow
 
