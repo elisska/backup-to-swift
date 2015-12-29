@@ -4,7 +4,7 @@
 
 * Download the correct version of hadoop-openstack integration lib from [here](http://grepcode.com/project/repository.cloudera.com/content/repositories/releases/org.apache.hadoop/hadoop-openstack/) or use the [attached jar](hadoop-openstack-2.6.0-cdh5.5.1.jar)
 * Place it to the folder containing hadoop libraries on every node (if CDH is used then this folder would be /opt/cloudera/parcels/CDH/lib/hadoop)
-* Add lines from [configuration.xml](configuration.xml) to **core-site.xml** configuration file (if CLoudera Manager is used, go to YARN configuration, search for _YARN Service Advanced Configuration Snippet (Safety Valve) for core-site.xml_ and add the lines to the section, then restart cluster)
+* Add lines from [configuration.xml](configuration.xml) to **core-site.xml** configuration file (if CLoudera Manager is used, go to YARN configuration, search for _YARN Service Advanced Configuration Snippet (Safety Valve) for core-site.xml_ and add the lines to the section, then restart cluster). Note that you need to specify correct parameters specific to your environment.
 * Test the integration using commands like below:
 
 **Copy data from HDFS to Swift:**
@@ -18,6 +18,8 @@ hadoop distcp -D fs.swift.service.<PROVIDER>.username=<username> -D fs.swift.ser
 ```
 hadoop distcp -D fs.swift.service.<PROVIDER>.username=<username> -D fs.swift.service.<PROVIDER>.password=<api-key> -update -p swift://<CONTAINER-NAME>.<PROVIDER>/<OBJECT-NAME> <PATH-ON-HDFS> 
 ```
+
+*Note:* Parameters _fs.swift.service.<PROVIDER>.username=<username>_ and _fs.swift.service.<PROVIDER>.password=<api-key>_ can be added to *core-site.xml* config file, and once added there is no need to specify them via -D options in `hadoop distcp` command.
 
 ## Oozie workflow
 
