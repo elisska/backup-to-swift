@@ -21,6 +21,10 @@ hadoop distcp -D fs.swift.service.<PROVIDER>.username=<username> -D fs.swift.ser
 
 *Note:* Parameters _fs.swift.service.\<PROVIDER\>.username=\<username\>_ and _fs.swift.service.\<PROVIDER\>.password=\<api-key\>_ can be added to *core-site.xml* config file, and once added there is no need to specify them via -D options in `hadoop distcp` command.
 
+## Benchmarking
+
+* Copying 100GB data from HDFS to Swift: ~43 mins 
+
 ## Oozie workflow
 
 You can use Oozie workflow to perform regular backup from HDFS to Swift. 
